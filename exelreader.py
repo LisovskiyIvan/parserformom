@@ -45,4 +45,4 @@ inns = []
 for z in range(int(len(arr)/6)):
     inns.append(arr[index])
     index = index + 6
-print(inns)
+
