@@ -3,7 +3,7 @@ from selenium import webdriver
 from fake_useragent import UserAgent
 from selenium.webdriver.common.by import By
 import pandas as pd
-from exelreader import inns
+from data import inns
 
 useragent = UserAgent()
 options = webdriver.ChromeOptions()

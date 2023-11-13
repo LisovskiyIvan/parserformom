@@ -1,4 +1,4 @@
-import pandas as pd
+# import pandas as pd
 import requests
 from bs4 import BeautifulSoup as bs
 
@@ -37,12 +37,12 @@ response = requests.get('https://spvb.ru/rynki/denezhnyy-rynok/uchastniki/', coo
 #     src = file.read()
 soup = bs(response, "lxml")
 table = soup.find_all("td")
-arr = []
+data_arr = []
 for i in table:
-    arr.append(i.text)
+    data_arr.append(i.text)
 index = 2
 inns = []
-for z in range(int(len(arr)/6)):
-    inns.append(arr[index])
+for z in range(int(len(data_arr)/6)):
+    inns.append(data_arr[index])
     index = index + 6
 
