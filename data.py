@@ -30,11 +30,6 @@ headers = {
 
 response = requests.get('https://spvb.ru/rynki/denezhnyy-rynok/uchastniki/', cookies=cookies, headers=headers).text
 
-# with open('result.html', 'w') as file:
-#     file.write(response)
-
-# with open("parserformom/result.html") as file:
-#     src = file.read()
 soup = bs(response, "lxml")
 table = soup.find_all("td")
 data_arr = []

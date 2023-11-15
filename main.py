@@ -17,12 +17,12 @@ try:
     #     for i in z:
     for i in inns:
             driver.get("https://egrul.nalog.ru/index.html")
-            time.sleep(1)
+            
             input_id = driver.find_element(By.ID, "query")
             input_id.send_keys(i)
-            time.sleep(1)
+        
             search_btn = driver.find_element(By.ID, "btnSearch").click()
-            time.sleep(2)
+            time.sleep(1)
             get_btn = driver.find_element(By.CLASS_NAME, "btn-excerpt").click()
             time.sleep(2)
 except Exception as ex:
