@@ -27,6 +27,7 @@ headers = {
     "upgrade-insecure-requests": "1",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 OPR/104.0.0.0",
 }
+
 s = requests.Session()
 response = s.get('https://spvb.ru/rynki/denezhnyy-rynok/uchastniki/', cookies=cookies, headers=headers).text
 
@@ -40,4 +41,5 @@ inns = []
 for z in range(int(len(data_arr)/6)):
     inns.append(data_arr[index])
     index = index + 6
+
 

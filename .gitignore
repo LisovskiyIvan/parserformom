@@ -1,1 +1,7 @@
 __pycache__
+venv
+build
+test3.xlsx
+dist
+main.spec
+audit.ico
